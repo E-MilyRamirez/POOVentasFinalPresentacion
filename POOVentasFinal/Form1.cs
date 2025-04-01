@@ -9,7 +9,13 @@ namespace POOVentasFinal
 
         private void BtnVentaContado_Click(object sender, EventArgs e)
         {
-            FrmVenta frmVenta = new FrmVenta();
+            FrmVenta frmVenta = new FrmVenta("contado");
+            frmVenta.ShowDialog();
+        }
+
+        private void BtnVentaCredito_Click(object sender, EventArgs e)
+        {
+            FrmVenta frmVenta = new FrmVenta("credito");
             frmVenta.ShowDialog();
         }
     }

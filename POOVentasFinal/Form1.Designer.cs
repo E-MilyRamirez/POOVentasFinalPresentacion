@@ -40,6 +40,7 @@
             BtnVentaCredito.TabIndex = 0;
             BtnVentaCredito.Text = "Venta Credito";
             BtnVentaCredito.UseVisualStyleBackColor = true;
+            BtnVentaCredito.Click += BtnVentaCredito_Click;
             // 
             // BtnVentaContado
             // 

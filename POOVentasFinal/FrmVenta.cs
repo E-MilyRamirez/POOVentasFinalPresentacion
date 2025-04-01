@@ -3,10 +3,19 @@
     public partial class FrmVenta : Form
     {
         List<ConceptoVenta> conceptos;
-        public FrmVenta()
+        public FrmVenta(string tipoVenta)
         {
             InitializeComponent();
             List<ConceptoVenta> conceptos = new List<ConceptoVenta>();
+            
+            if (tipoVenta == "credito")
+            {
+                this.Text = "Venta de credito";
+            }
+            else
+            {
+                this.Text = "Venta de contado";
+            }
 
         }
 
