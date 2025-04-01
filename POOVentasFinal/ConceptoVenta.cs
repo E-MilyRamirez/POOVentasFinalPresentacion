@@ -13,6 +13,7 @@ namespace POOVentasFinal
         public decimal ValorUnitario { get; set; }
         public decimal Importe 
         { 
+            //Solo lectura
             get 
             { 
                 return CalcularImporte(); 
