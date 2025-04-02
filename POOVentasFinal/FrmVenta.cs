@@ -2,18 +2,19 @@
 {
     public partial class FrmVenta : Form
     {
-        List<ConceptoVenta> conceptos;
+        private Venta _venta;
         public FrmVenta(string tipoVenta)
         {
             InitializeComponent();
-            List<ConceptoVenta> conceptos = new List<ConceptoVenta>();
-            
+
             if (tipoVenta == "credito")
             {
+                _venta = new VentaCredito();
                 this.Text = "Venta de credito";
             }
             else
             {
+                _venta = new VentaContado();
                 this.Text = "Venta de contado";
             }
 
@@ -32,9 +33,13 @@
             concepto.Cantidad = Convert.ToInt32(TxtCantidad.Text);
             concepto.Descripcion = TxtDescripcion.Text;
             concepto.ValorUnitario = Convert.ToDecimal(TxtValorUnitario.Text);
-            conceptos.Add(concepto);
+            _venta.Conceptos.Add(concepto);
 
-            DgvConceptos.DataSource = conceptos;
+            DgvConceptos.DataSource = _venta.Conceptos;
+
+            TxtCantidad.Text = string.Empty;
+            TxtDescripcion.Text = string.Empty;
+            TxtValorUnitario.Text = string.Empty;
         }
     }
 }
