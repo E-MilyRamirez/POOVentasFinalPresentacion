@@ -29,6 +29,7 @@
         {
             DgvConceptos.DataSource = null;
 
+            //Se crea el concepto de venta
             ConceptoVenta concepto = new ConceptoVenta();
             concepto.Cantidad = Convert.ToInt32(TxtCantidad.Text);
             concepto.Descripcion = TxtDescripcion.Text;
@@ -37,9 +38,11 @@
 
             DgvConceptos.DataSource = _venta.Conceptos;
 
+            //Empty es para la limpieza de los conceptos
             TxtCantidad.Text = string.Empty;
             TxtDescripcion.Text = string.Empty;
             TxtValorUnitario.Text = string.Empty;
+            TxtDescripcion.Focus();
         }
     }
 }

@@ -64,14 +64,14 @@
             TxtDescripcion.Multiline = true;
             TxtDescripcion.Name = "TxtDescripcion";
             TxtDescripcion.Size = new Size(612, 92);
-            TxtDescripcion.TabIndex = 2;
+            TxtDescripcion.TabIndex = 0;
             // 
             // TxtCantidad
             // 
             TxtCantidad.Location = new Point(381, 153);
             TxtCantidad.Name = "TxtCantidad";
             TxtCantidad.Size = new Size(125, 27);
-            TxtCantidad.TabIndex = 3;
+            TxtCantidad.TabIndex = 2;
             // 
             // DgvConceptos
             // 
@@ -81,6 +81,7 @@
             DgvConceptos.RowHeadersWidth = 51;
             DgvConceptos.Size = new Size(997, 319);
             DgvConceptos.TabIndex = 4;
+            DgvConceptos.TabStop = false;
             // 
             // label3
             // 
@@ -97,14 +98,14 @@
             TxtValorUnitario.Location = new Point(140, 153);
             TxtValorUnitario.Name = "TxtValorUnitario";
             TxtValorUnitario.Size = new Size(125, 27);
-            TxtValorUnitario.TabIndex = 3;
+            TxtValorUnitario.TabIndex = 1;
             // 
             // BtnAgregar
             // 
             BtnAgregar.Location = new Point(658, 153);
             BtnAgregar.Name = "BtnAgregar";
             BtnAgregar.Size = new Size(94, 29);
-            BtnAgregar.TabIndex = 5;
+            BtnAgregar.TabIndex = 3;
             BtnAgregar.Text = "Agregar";
             BtnAgregar.UseVisualStyleBackColor = true;
             BtnAgregar.Click += BtnAgregar_Click;
