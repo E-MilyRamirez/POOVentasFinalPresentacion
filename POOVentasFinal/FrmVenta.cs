@@ -12,11 +12,19 @@
             {
                 _venta = new VentaCredito();
                 this.Text = "Venta de credito";
+                TxtCortesia.Text = "No";
             }
-            else
+            else if (tipoVenta == "contado")
             {
                 _venta = new VentaContado();
                 this.Text = "Venta de contado";
+                TxtCortesia.Text = "No";
+            }
+            else
+            {
+                _venta = new VentaCortesia();
+                this.Text = "Venta de cortesia";
+                TxtCortesia.Text = "Si";
             }
 
         }
@@ -46,5 +54,44 @@
             TxtTotal.Text = _venta.Total.ToString();
             TxtDescripcion.Focus();
         }
+
+        private void TxtCortesia_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtCortesia.Text.ToLower() == "si")
+            {
+                _venta = new VentaCortesia();
+                this.Text = "Venta de cortesía";
+            }
+            else
+            {
+                _venta = new VentaContado();
+                this.Text = "Venta de contado";
+
+            }
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEfectivo_Click(object sender, EventArgs e)
+        {
+            FormaPagoEfectivo efectivo = new FormaPagoEfectivo();
+            AplicarPago(efectivo);
+        }
+        void AplicarPago(IFormaPago formaPago)
+        {
+            formaPago.Cobrar(_venta.Total);
+        }
+
+        private void btnTarjeta_Click(object sender, EventArgs e)
+        {
+            FormaPagoTarjeta tarjeta = new FormaPagoTarjeta();
+            AplicarPago(tarjeta);
+        }
+
+       
     }
 }

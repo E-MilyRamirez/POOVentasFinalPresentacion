@@ -38,6 +38,10 @@
             BtnAgregar = new Button();
             TxtTotal = new TextBox();
             label4 = new Label();
+            label5 = new Label();
+            TxtCortesia = new TextBox();
+            btnEfectivo = new Button();
+            btnTarjeta = new Button();
             ((System.ComponentModel.ISupportInitialize)DgvConceptos).BeginInit();
             SuspendLayout();
             // 
@@ -131,11 +135,54 @@
             label4.TabIndex = 6;
             label4.Text = "Total:";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(101, 600);
+            label5.Name = "label5";
+            label5.Size = new Size(82, 20);
+            label5.TabIndex = 7;
+            label5.Text = "V. Cortesía:";
+            label5.Click += label5_Click;
+            // 
+            // TxtCortesia
+            // 
+            TxtCortesia.Location = new Point(189, 597);
+            TxtCortesia.Name = "TxtCortesia";
+            TxtCortesia.ReadOnly = true;
+            TxtCortesia.Size = new Size(125, 27);
+            TxtCortesia.TabIndex = 8;
+            TxtCortesia.TextChanged += TxtCortesia_TextChanged;
+            // 
+            // btnEfectivo
+            // 
+            btnEfectivo.Location = new Point(463, 597);
+            btnEfectivo.Name = "btnEfectivo";
+            btnEfectivo.Size = new Size(94, 29);
+            btnEfectivo.TabIndex = 9;
+            btnEfectivo.Text = "Efectivo";
+            btnEfectivo.UseVisualStyleBackColor = true;
+            btnEfectivo.Click += btnEfectivo_Click;
+            // 
+            // btnTarjeta
+            // 
+            btnTarjeta.Location = new Point(597, 599);
+            btnTarjeta.Name = "btnTarjeta";
+            btnTarjeta.Size = new Size(94, 29);
+            btnTarjeta.TabIndex = 10;
+            btnTarjeta.Text = "Tarjeta";
+            btnTarjeta.UseVisualStyleBackColor = true;
+            btnTarjeta.Click += btnTarjeta_Click;
+            // 
             // FrmVenta
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1058, 648);
+            Controls.Add(btnTarjeta);
+            Controls.Add(btnEfectivo);
+            Controls.Add(TxtCortesia);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(TxtTotal);
             Controls.Add(BtnAgregar);
@@ -165,5 +212,9 @@
         private Button BtnAgregar;
         private TextBox TxtTotal;
         private Label label4;
+        private Label label5;
+        private TextBox TxtCortesia;
+        private Button btnEfectivo;
+        private Button btnTarjeta;
     }
 }

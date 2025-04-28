@@ -21,7 +21,8 @@ namespace POOVentasFinal
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FrmVenta frmVenta = new FrmVenta("cortesia");
+            frmVenta.ShowDialog();
         }
     }
 }
