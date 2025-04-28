@@ -36,6 +36,8 @@
             label3 = new Label();
             TxtValorUnitario = new TextBox();
             BtnAgregar = new Button();
+            TxtTotal = new TextBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)DgvConceptos).BeginInit();
             SuspendLayout();
             // 
@@ -79,7 +81,7 @@
             DgvConceptos.Location = new Point(33, 270);
             DgvConceptos.Name = "DgvConceptos";
             DgvConceptos.RowHeadersWidth = 51;
-            DgvConceptos.Size = new Size(997, 319);
+            DgvConceptos.Size = new Size(970, 304);
             DgvConceptos.TabIndex = 4;
             DgvConceptos.TabStop = false;
             // 
@@ -110,11 +112,32 @@
             BtnAgregar.UseVisualStyleBackColor = true;
             BtnAgregar.Click += BtnAgregar_Click;
             // 
+            // TxtTotal
+            // 
+            TxtTotal.Location = new Point(878, 600);
+            TxtTotal.Name = "TxtTotal";
+            TxtTotal.ReadOnly = true;
+            TxtTotal.Size = new Size(125, 27);
+            TxtTotal.TabIndex = 5;
+            TxtTotal.Text = "0.00";
+            TxtTotal.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(827, 603);
+            label4.Name = "label4";
+            label4.Size = new Size(45, 20);
+            label4.TabIndex = 6;
+            label4.Text = "Total:";
+            // 
             // FrmVenta
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1058, 648);
+            Controls.Add(label4);
+            Controls.Add(TxtTotal);
             Controls.Add(BtnAgregar);
             Controls.Add(DgvConceptos);
             Controls.Add(TxtValorUnitario);
@@ -140,5 +163,7 @@
         private Label label3;
         private TextBox TxtValorUnitario;
         private Button BtnAgregar;
+        private TextBox TxtTotal;
+        private Label label4;
     }
 }

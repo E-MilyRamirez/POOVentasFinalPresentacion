@@ -3,6 +3,7 @@
     public partial class FrmVenta : Form
     {
         private Venta _venta;
+
         public FrmVenta(string tipoVenta)
         {
             InitializeComponent();
@@ -42,6 +43,7 @@
             TxtCantidad.Text = string.Empty;
             TxtDescripcion.Text = string.Empty;
             TxtValorUnitario.Text = string.Empty;
+            TxtTotal.Text = _venta.Total.ToString();
             TxtDescripcion.Focus();
         }
     }
